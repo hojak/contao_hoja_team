@@ -1,0 +1,15 @@
+
+<div class="hoja_team_description">
+
+<?php if ( $this->headline ) : ?>
+<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php endif; ?>
+
+
+<?php if ($team['team_image']): ?>
+{{image::<?= $team['image']?>?width=120&heigth=1000&mode=proportional&alt=<?= $this->name ?>}}
+<?php endif; ?>
+
+
+</div>
+
