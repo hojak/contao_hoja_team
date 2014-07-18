@@ -42,9 +42,10 @@ class ContentHoJaTeamDescription extends ContentElement
 		$this->Template->team_id = $this->hoja_team_id;
 		
 		$this->Template->team = $this->loadTeam ( $this->hoja_team_id );
+		
 		if ( $this->Template->team == null ) {
 			// fehler: team existiert nicht!
-			$this->log('Content Element access to non existent HoJa Team ' . $this->hoja_team_id, 'ContentPTSVTeamList compile', TL_ERROR);
+			$this->log('Content Element access to non existent HoJa Team ' . $this->hoja_team_id, 'ContentHoJaTeamDescription', TL_ERROR);
 			return;
 		}
 	}

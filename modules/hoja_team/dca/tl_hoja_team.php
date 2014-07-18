@@ -81,7 +81,12 @@ $GLOBALS['TL_DCA']['tl_hoja_team'] = array
 	'palettes' => array
 	(
 		'__selector__'	=> array('useFilePath'),
-		'default'		=> '{general_legend},name,league,training_dates;{contact_legend},trainer,trainer_email,contact,contact_email;{filePath_legend},useFilePath;{image_legend},team_image;{training_legend},training;'
+		'default'		=> 
+			'{general_legend},name,league,training_dates;'
+			.'{contact_legend},trainer,trainer_email,contact,contact_email;'
+			.'{filePath_legend},useFilePath;'
+			.'{info_legend},team_image,description;'
+			.'{training_legend},training;'
 	),
 
 	// Subpalettes
@@ -161,10 +166,11 @@ $GLOBALS['TL_DCA']['tl_hoja_team'] = array
 			'sql'		=> 'text NOT NULL'
 		),
 		'description' => array (
-			'label'		=> &$GLOBALS['TL_LANG']['tl_hoja_team']['contact_email'],
+			'label'		=> &$GLOBALS['TL_LANG']['tl_hoja_team']['description'],
 			'exclude'	=> true,
 			'search'	=> true,
 			'inputType'	=> 'textarea',
+			'eval'		=> array ('rte' => 'tinyMCE'),
 			'sql' 		=> 'text NOT NULL'
 		),
 		'useFilePath' => array
@@ -182,7 +188,7 @@ $GLOBALS['TL_DCA']['tl_hoja_team'] = array
 			'exclude'	=> true,
 			'inputType'	=> 'fileTree',
 			'eval'		=> array('fieldType'=>'radio', 'files'=>false),
-			'sql' 		=>  'varchar(255) NOT NULL default \'\'',
+			'sql' 		=>  'binary(16) NULL',
 		),                       
 		'training' => array
 		(
@@ -228,11 +234,6 @@ $GLOBALS['TL_DCA']['tl_hoja_team'] = array
 	),
 );
 
-
-/* training dates as multiple hash field **/
-
-
-$GLOBALS['TL_DCA']['tl_hoja_team']['fields']
 
 
 /**

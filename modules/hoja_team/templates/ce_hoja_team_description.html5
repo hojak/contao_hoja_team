@@ -1,14 +1,81 @@
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
 
-<div class="hoja_team_description">
+<h1><?= $this->team['name'] ?></h1>
+
 
 <?php if ( $this->headline ) : ?>
 <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
 
 
-<?php if ($team['team_image']): ?>
-{{image::<?= $team['image']?>?width=120&heigth=1000&mode=proportional&alt=<?= $this->name ?>}}
+<?php if ($this->team['team_image']): 
+	list ( $width, $height, $mode ) = $this->size ? unserialize ( $this->size ) : array ( 520, 520, "proportional");
+?>
+{{image::<?= $this->team['team_image'] ?>?width=<?= $width ?>&heigth=<?= $height ?>&mode=<?= $mode ?>&alt=<?= urlencode ( "Mannschaftsfoto ". $this->team['name'] ) ?>&class=team_image}}
 <?php endif; ?>
+
+	<div class="inner_block">
+
+	<div class="training">
+		<?php if ( $this->team['training']): ?>
+		<h3>Trainingstermine</h3>
+		<ul>
+		<?php
+			$training = unserialize ( $this->team['training']);
+			
+			$dow = array ( "dummy", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag");
+			
+			foreach ( $training as $entry ):
+			
+		?>
+			<li>
+				<span class="dow"><?= $dow[$entry["dayofweek"]] ?>:</span>
+				<?= $entry["time_start"] ?> &ndash; <?= $entry["time_end"] ?> Uhr
+				<br />
+				<?= $entry["location"] ?>
+			</li>
+			
+		
+		<?php endforeach; ?>
+		</ul>
+		<?php endif ; ?>
+	</div>
+	
+	<div class="league">
+		<?php if ( $this->team['league']): ?>
+		<h3>Spielklasse</h3>
+		<p><?= $this->team['league'] ?></p>
+		<?php endif; ?>
+	</div>
+	
+	<div class="contact">
+		<?php if ( $this->team['trainer']): ?>
+		<h3>Trainer</h3>
+		<p><?= $this->team['trainer'] ?>
+			<?php if ( $this->team['trainer_email']): ?>
+			<br />E-Mail: <a href="mailto:<?= $this->team['trainer_email'] ?>"><?= $this->team['trainer_email'] ?></a>
+			<?php endif; ?>
+		</p>
+		<?php endif; ?>
+	
+		<?php if ( $this->team['contact']): ?>
+		<h3>Ansprechpartner</h3>
+		<p><?= $this->team['contact'] ?>
+			<?php if ( $this->team['contact_email']): ?>
+			<br />E-Mail: <a href="mailto:<?= $this->team['contact_email'] ?>"><?= $this->team['contact_email'] ?></a>
+			<?php endif; ?>
+		</p>
+		<?php endif; ?>
+	</div>
+		
+
+	</div>
+	
+	<?php if ( $this->team ['description']): ?>
+	<div class="description">
+	<?= $this->team['description'] ?>
+	</div>
+	<?php endif; ?>
 
 
 </div>

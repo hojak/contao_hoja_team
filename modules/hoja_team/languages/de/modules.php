@@ -15,10 +15,11 @@
 /**
  * Back end modules
  */
-$GLOBALS['TL_LANG']['MOD']['hoja_teams'] = array('Teams', 'Teams bearbeiten und verwalten');
+$GLOBALS['TL_LANG']['MOD']['hoja_team'] = array('Teams', 'Teams bearbeiten und verwalten');
 
 
 /**
  * Front end modules
  */
-$GLOBALS['TL_LANG']['FMD']['hoja_team_description'] = array('Team-Beschreibung', 'einfache Team-Beschreibung mit Mannschaftsfoto');
+$GLOBALS['TL_LANG']['CTE']['hoja_team'] = array ("Teams", "Module rund um die Team-Verwaltung");
+$GLOBALS['TL_LANG']['CTE']['hoja_team_description_ce'] = array('Team-Beschreibung', 'einfache Team-Beschreibung mit Mannschaftsfoto');

@@ -29,13 +29,13 @@ $GLOBALS['TL_LANG']['tl_hoja_team'] = array (
 	'training_dayofweek' => array ("Wochentag", "Wochentag" ),
 	'training_dayofweek_labels' => array 
 	(
-		0 => "Montag",
-		1 => "Dienstag",
-		2 => "Mittwoch",
-		3 => "Donnerstag",
-		4 => "Freitag",
-		5 => "Samstag",
-		6 => "Sonntag"
+		"1" => "Montag",
+		"2" => "Dienstag",
+		"3" => "Mittwoch",
+		"4" => "Donnerstag",
+		"5" => "Freitag",
+		"6" => "Samstag",
+		"7" => "Sonntag"
 	),
 	'training_time_start' => array ("Start", "Uhrzeit" ),
 	'training_time_end'   => array ("Ende", "Uhrzeit" ),
@@ -43,7 +43,6 @@ $GLOBALS['TL_LANG']['tl_hoja_team'] = array (
 );
 
 
-&$GLOBALS['TL_LANG']['tl_hoja_team']['training_dayofweek_labels']
 /**
  * Legends
  */
@@ -51,7 +50,7 @@ $GLOBALS['TL_LANG']['tl_hoja_team']['general_legend'] = 'Mannschaftsdaten';
 $GLOBALS['TL_LANG']['tl_hoja_team']['filePath_legend'] = 'Dateipfad für Bilder etc. einschränken';
 $GLOBALS['TL_LANG']['tl_hoja_team']['contact_legend'] = "Kontaktdaten";
 $GLOBALS['TL_LANG']['tl_hoja_team']['training_legend'] = "Trainingszeiten";
-$GLOBALS['TL_LANG']['tl_hoja_team']['image_legend'] = "Mannschaftsfoto";
+$GLOBALS['TL_LANG']['tl_hoja_team']['info_legend'] = "Daten für die Beschreibungs-Seite";
 
 
 /**

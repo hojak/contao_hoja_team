@@ -41,7 +41,7 @@
  
  $GLOBALS['BE_MOD']['content']['hoja_team'] = array (
  	'tables' => array ('tl_hoja_team','tl_content','tl_user','tl_user_group' ),
- 	'icon' => 'system/modules/sga_team/assets/images/icon.png'
+ 	'icon' => 'system/modules/hoja_team/assets/images/icon.png'
  );
  
 
@@ -91,11 +91,11 @@
  * named "ContentClass1.php" in your module folder.
  */
  
- $GLOBALS['TL_CTE' ] = array (
- 	'hoja_teams' => array (
- 		'hoja_team_description' => 'ContentHoJaTeamDescription',
- 	)
- );
+ 
+$GLOBALS['TL_CTE']['hoja_team'] = array 
+(
+	'hoja_team_description_ce' => 'ContentHoJaTeamDescription'
+);
 
 
 /**
