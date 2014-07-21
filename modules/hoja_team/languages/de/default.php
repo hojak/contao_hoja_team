@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2005-2014 Leo Feyer
  *
- * @package   sga_team
+ * @package   hoja_team
  * @author    Holger Janßen
  * @license   LGPL
  * @copyright Holger Janßen, 2014
