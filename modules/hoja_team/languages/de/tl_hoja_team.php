@@ -26,6 +26,7 @@ $GLOBALS['TL_LANG']['tl_hoja_team'] = array (
 	'filePath'		=> array ("Bild-Verzeichnis", "Einschränkung für das Bildverzeichnis für diese Mannschaft" ),
 	'useFilePath'	=> array ("Bild-Verzeichnis festlegen", "Soll diese Mannschaft ein festes Verzeichnis für Bilder bekommen?"),
 	'training'	=> array ("Trainingszeiten", "Wochen-Trainingszeiten dieser Mannschaft"),
+	'show_training' => array ("Trainingszeiten angeben", "Sollen (ein oder mehrere) Trainingszeiten eingegeben werden?"),
 	'training_dayofweek' => array ("Wochentag", "Wochentag" ),
 	'training_dayofweek_labels' => array 
 	(

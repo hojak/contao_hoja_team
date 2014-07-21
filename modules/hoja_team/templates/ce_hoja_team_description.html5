@@ -17,7 +17,7 @@
 	<div class="inner_block">
 
 	<div class="training">
-		<?php if ( $this->team['training']): ?>
+		<?php if ( $this->team['show_training'] ): ?>
 		<h3>Trainingstermine</h3>
 		<ul>
 		<?php
@@ -68,6 +68,7 @@
 		<?php endif; ?>
 	</div>
 		
+	<br style="clear: both;">
 
 	</div>
 	

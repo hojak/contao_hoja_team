@@ -80,19 +80,20 @@ $GLOBALS['TL_DCA']['tl_hoja_team'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'__selector__'	=> array('useFilePath'),
+		'__selector__'	=> array('useFilePath','show_training'),
 		'default'		=> 
 			'{general_legend},name,league,training_dates;'
 			.'{contact_legend},trainer,trainer_email,contact,contact_email;'
 			.'{filePath_legend},useFilePath;'
 			.'{info_legend},team_image,description;'
-			.'{training_legend},training;'
+			.'{training_legend},show_training;'
 	),
 
 	// Subpalettes
 	'subpalettes' => array
 	(
-		'useFilePath'	=> 'filePath'
+		'useFilePath'	=> 'filePath',
+		'show_training' => 'training'
 	),
 
 	// Fields
@@ -189,6 +190,15 @@ $GLOBALS['TL_DCA']['tl_hoja_team'] = array
 			'inputType'	=> 'fileTree',
 			'eval'		=> array('fieldType'=>'radio', 'files'=>false),
 			'sql' 		=>  'binary(16) NULL',
+		),
+		'show_training' => array
+		(
+			'label'		=> &$GLOBALS['TL_LANG']['tl_hoja_team']['show_training'],
+			'exclude'	=> true,
+			'filter'	=> true,
+			'inputType' 	=> 'checkbox',
+			'eval'		=> array ('submitOnChange' => true ),
+			'sql'		=> 'char(1) NOT NULL default \'\'',
 		),                       
 		'training' => array
 		(
