@@ -17,7 +17,7 @@
 $GLOBALS['TL_LANG']['tl_hoja_team'] = array (
 	"name" 			=> array ('Mannschaftsname','Eine eindeutiger Name für die Mannschaft'),
 	'league' 		=> array ('Liga', 'Die Spielklasse der Mannschaft (in der aktuellen Saison)'),
-	'team_image' 	=> array ('Mannschaftsfoto', 'Aufwahl des Mannschaftsfotos. Die Größe wird automatisch umgerechnet'),
+	'team_image' 	=> array ('Mannschaftsfoto', 'Auswahl des Mannschaftsfotos. Die Größe wird automatisch umgerechnet'),
 	'trainer' 		=> array ("Trainer", "Name des Trainers"),
 	'trainer_email' => array ("E-Mail", "E-Mail-Adresse des Trainers"),
 	'contact' 		=> array ("Ansprechpartner", "Name des Ansprechpartners"),
