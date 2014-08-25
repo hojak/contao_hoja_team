@@ -10,8 +10,16 @@
 
 <?php if ($this->team['team_image']): 
 	list ( $width, $height, $mode ) = $this->size ? unserialize ( $this->size ) : array ( 520, 520, "proportional");
+	
+	if ( Validator::isUuid($this->team['team_image']) ) {
+		$objFile = \FilesModel::findByPk($this->team['team_image']);
+		$imgFile = $objFile->path;
+	} else {
+		$imgFile = $this->team['team_image'];
+	}
+
 ?>
-{{image::<?= $this->team['team_image'] ?>?width=<?= $width ?>&heigth=<?= $height ?>&mode=<?= $mode ?>&alt=<?= urlencode ( "Mannschaftsfoto ". $this->team['name'] ) ?>&class=team_image}}
+{{image::<?= $imgFile ?>?width=<?= $width ?>&heigth=<?= $height ?>&mode=<?= $mode ?>&alt=<?= urlencode ( "Mannschaftsfoto ". $this->team['name'] ) ?>&class=team_image}}
 <?php endif; ?>
 
 	<div class="inner_block">
